@@ -1,0 +1,179 @@
+<!-- Code made by Max Vilà Ruiz -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="/css/Style.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div name="Background Header Image" class="header_backGroundImg">
+            <div class="titles">
+                <h1>Benvingut/da <span id="span_name"></span></h1>
+            </div>
+
+            <div class="description">
+                <p>Organitzar-se amb nosaltres és tan senzill com afegir els teus esdeveniments educatius i prou. Nosaltres ens encarreguem de la resta!</p>
+                <a class="help" onclick="help()">?</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main style="margin-top: 1.5rem;">
+        <div>
+            <input style="display: none;" type="text" id="idExamens">
+
+            <div>
+                <button class="sectionTitle" onclick="visibilitySections('examens')" id="sectionName1">▼ Exàmens</button>
+            </div>
+            
+            <div id="sectionContent_visibility1" style="display: block;">
+            
+                <table id="table1">
+                    <thead>
+                        <div>
+                            <th class="table_Default">Degree of difficulty</th>
+                            <th class="table_Default">Subject</th>
+                            <th class="table_Default">Exam date</th>
+                            <th class="table_Default">Options</th>
+                        </div>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+            
+                <div>
+                    <div style="display: flex; justify-content: end;">
+                        <button class="addEvent" style="display: block;" id="showForm1" onclick="show_addEvent('examens')">+</button>
+                        <button class="addEvent" style="display: none;" id="hideForm1" onclick="hide_addEvent('examens')">-</button>
+                    </div>
+
+                    <div id="eventContent_visibility1" style="display: none;">
+                        <form class="form_addEvent" onsubmit="event.preventDefault(); onSubmit('examens');" autocomplete="off">
+                            <select class="form_elementSelector" id="difficulty1" required>
+                                <option value> Degree of difficulty </option>
+                                <option value="Fàcil">Fàcil</option>
+                                <option value="Mig">Mig</option>
+                                <option value="Difícil">Difícil</option>
+                            </select>
+                            <input type="text" class="form_element" id="name1" placeholder="Name of the event" required>
+                            <input type="text" class="form_element" id="date1" placeholder="Due date" required>
+                
+                            <button class="submit_formAddEvent" id="submit1">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <input style="display: none;" type="text" id="idProjectes">
+
+            <div>
+                <button class="sectionTitle" onclick="visibilitySections('projectes')" id="sectionName2">▼ Projectes</button>
+            </div>
+                
+            <div id="sectionContent_visibility2" style="display: block;">
+            
+                <table id="table2">
+                    <thead>
+                        <div>
+                            <th class="table_Default">Degree of difficulty</th>
+                            <th class="table_Default">Project title</th>
+                            <th class="table_Default">Due date</th>
+                            <th class="table_Default">Options</th>
+                        </div>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+
+                <div>
+                    <div style="display: flex; justify-content: end;">
+                        <button class="addEvent" style="display: block;" id="showForm2" onclick="show_addEvent('projectes')">+</button>
+                        <button class="addEvent" style="display: none;" id="hideForm2" onclick="hide_addEvent('projectes')">-</button>
+                    </div>
+
+                    <div id="eventContent_visibility2" style="display: none;">
+                        <form class="form_addEvent" onsubmit="event.preventDefault(); onSubmit('projectes');" autocomplete="off">
+                            <select class="form_elementSelector" id="difficulty2" required>
+                                <option value> Degree of difficulty </option>
+                                <option value="Fàcil">Fàcil</option>
+                                <option value="Mig">Mig</option>
+                                <option value="Difícil">Difícil</option>
+                            </select>
+                            <input type="text" class="form_element" id="name2" placeholder="Name of the event" required>
+                            <input type="text" class="form_element" id="date2" placeholder="Due date" required>
+                
+                            <button class="submit_formAddEvent" id="submit2">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <input style="display: none;" type="text" id="idDeures">
+            
+            <div>
+                <button class="sectionTitle" onclick="visibilitySections('deures')" id="sectionName3">▼ Deures</button>
+            </div>
+
+            <div id="sectionContent_visibility3" style="display: block;">
+            
+                <table id="table3">
+                    <thead>
+                        <div>
+                            <th class="table_Default">Degree of difficulty</th>
+                            <th class="table_Default">Homework title</th>
+                            <th class="table_Default">Due date</th>
+                            <th class="table_Default">Options</th>
+                        </div>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+
+                 <div>
+                    <div style="display: flex; justify-content: end;">
+                        <button class="addEvent" style="display: block;" id="showForm3" onclick="show_addEvent('deures')">+</button>
+                        <button class="addEvent" style="display: none;" id="hideForm3" onclick="hide_addEvent('deures')">-</button>
+                    </div>
+
+                    <div id="eventContent_visibility3" style="display: none;">
+                        <form class="form_addEvent" onsubmit="event.preventDefault(); onSubmit('deures');" autocomplete="off">
+                            <select class="form_elementSelector" id="difficulty3" required>
+                                <option value> Degree of difficulty </option>
+                                <option value="Fàcil">Fàcil</option>
+                                <option value="Mig">Mig</option>
+                                <option value="Difícil">Difícil</option>
+                            </select>
+                            <input type="text" class="form_element" id="name3" placeholder="Name of the event" required>
+                            <input type="text" class="form_element" id="date3" placeholder="Due date" required>
+                
+                            <button class="submit_formAddEvent" id="submit3">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br>
+    </main>
+
+    <script src="js/Home.js"></script>
+</body>
+
+</html>

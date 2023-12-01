@@ -1,0 +1,54 @@
+<!-- Code made by Max Vilà Ruiz -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+
+    <link rel="stylesheet" href="/css/Style.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <div name="Background Header Image" class="header_backGroundImg">
+            <div class="titles">
+                <h1>Organitzador Escolar</h1>
+            </div>
+            <div class="description">
+                <nav class="nav_eventPage">
+                    <a class="nav_elem" href="Index.html">Welcome page</a>
+                    <a class="nav_elem" href="Register.html">Sign Up</a>
+                    <a class="nav_elem" href="LogIn.html">Sign In</a>
+                    <a class="nav_elem" href="Home.html">Homepage</a>
+                </nav>
+                
+                <a class="help" onclick="help()">?</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <label>
+            <p class="event_title"><span id="name"></span></p>
+
+            <div name="Description">
+                <p>Descripció dels continguts:</p>
+                <textarea style="font-size: 1rem;" id="description" rows="10" cols="44"></textarea>
+                <button style="font-size: 1rem;" onclick="save()">Guardar</button>
+            </div>
+
+            <div name="Due Date">
+                <p>Data de venciment: <span id="date"></span></p>
+            </div>
+
+            <div name="Difficulty">
+                <p>Grau de dificultat: <span id="difficulty"></span></p>
+            </div>
+        </label>
+    </main>
+
+    <script src="js/EventPage.js"></script>
+</body>
+</html>
